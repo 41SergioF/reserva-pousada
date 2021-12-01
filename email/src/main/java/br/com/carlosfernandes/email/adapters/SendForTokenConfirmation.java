@@ -1,6 +1,6 @@
 package br.com.carlosfernandes.email.adapters;
 
-import br.com.carlosfernandes.core.ports.driven.SendEmailForTokenConfirmationPort;
+import br.com.carlosfernandes.core.ports.driven.email.SendEmailForTokenConfirmationPort;
 
 public class SendForTokenConfirmation implements SendEmailForTokenConfirmationPort{
     @Override

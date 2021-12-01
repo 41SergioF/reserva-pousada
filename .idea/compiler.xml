@@ -10,6 +10,7 @@
         <module name="core" />
         <module name="app-client-test" />
         <module name="email" />
+        <module name="repository.mongodb" />
       </profile>
     </annotationProcessing>
   </component>

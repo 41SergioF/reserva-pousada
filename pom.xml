@@ -12,6 +12,7 @@
         <module>core</module>
         <module>app-client-test</module>
         <module>email</module>
+        <module>repository.mongodb</module>
     </modules>
 
     <properties>
