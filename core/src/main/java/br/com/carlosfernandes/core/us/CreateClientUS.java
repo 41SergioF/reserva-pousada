@@ -17,7 +17,7 @@ public record CreateClientUS(
         System.out.println("Verificar se esse email já existe no BD");
         var id = saveClientRepositoryPort.apply(client);
         sendEmailForTokenConfirmationPort.apply(client.getEmail(), "123456987");
-
         return id;
     }
+
 }
