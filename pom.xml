@@ -10,9 +10,9 @@
     <version>1.0-SNAPSHOT</version>
     <modules>
         <module>core</module>
-        <module>app-client-test</module>
         <module>email</module>
         <module>repository.mongodb</module>
+        <module>api.rest</module>
     </modules>
 
     <properties>

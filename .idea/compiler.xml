@@ -8,10 +8,13 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="core" />
-        <module name="app-client-test" />
         <module name="email" />
+        <module name="api.rest" />
         <module name="repository.mongodb" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="app-client-test" target="16" />
+    </bytecodeTargetLevel>
   </component>
 </project>
