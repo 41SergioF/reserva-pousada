@@ -14,14 +14,16 @@ import lombok.Setter;
 public class Bedroom {
 	
 	private String id;
+	private String number;
 	private String description;
 	
 	private Status status;
 	
 	private List<Reserve> reserves = new ArrayList<>();
 
-	public Bedroom(String id, String description, Status status, List<Reserve> reserves) {
+	public Bedroom(String id, String number, String description, Status status, List<Reserve> reserves) {
 		this.id = id;
+		this.number = number;
 		this.description = description;
 		this.status = status;
 		this.reserves = reserves;
