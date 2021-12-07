@@ -5,7 +5,9 @@ import br.com.carlosfernandes.core.ports.driven.repository.BedroomRepositoryPort
 import br.com.carlosfernandes.repository.mongodb.connections.MongoTemplateSingleton;
 import com.mongodb.client.MongoClients;
 import org.springframework.data.mongodb.core.MongoTemplate;
+import org.springframework.stereotype.Service;
 
+@Service
 public class BedroomRepository implements BedroomRepositoryPort {
 
     private final MongoTemplate operation;

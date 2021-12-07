@@ -1,23 +1,25 @@
 package br.com.carlosfernandes.repository.mongodb.adapters;
 
 import br.com.carlosfernandes.core.domain.Client;
+import br.com.carlosfernandes.core.domain.Reserve;
 import br.com.carlosfernandes.core.ports.driven.repository.ClientRepositoryPort;
+import br.com.carlosfernandes.core.ports.driven.repository.ReserveRepositoryPort;
 import br.com.carlosfernandes.repository.mongodb.connections.MongoTemplateSingleton;
-import com.mongodb.client.MongoClients;
 import org.springframework.data.mongodb.core.MongoOperations;
-import org.springframework.data.mongodb.core.MongoTemplate;
+import org.springframework.stereotype.Service;
 
-public class ClientRepository implements ClientRepositoryPort {
+@Service
+public class ReserveRepository implements ReserveRepositoryPort {
 
     private final MongoOperations operation;
 
-    public ClientRepository(){
+    public ReserveRepository(){
         operation = MongoTemplateSingleton.operations;
     }
 
     @Override
-    public Client save(Client client) {
-        return operation.save(client);
+    public Reserve save(Reserve reserve) {
+        return operation.save(reserve);
     }
 
 }

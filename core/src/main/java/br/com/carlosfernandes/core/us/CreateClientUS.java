@@ -4,7 +4,9 @@ import br.com.carlosfernandes.core.domain.Client;
 import br.com.carlosfernandes.core.ports.driven.email.SendEmailForTokenConfirmationPort;
 import br.com.carlosfernandes.core.ports.driven.repository.ClientRepositoryPort;
 import br.com.carlosfernandes.core.ports.driver.CreateClientPort;
+import org.springframework.stereotype.Service;
 
+@Service
 public record CreateClientUS(
     SendEmailForTokenConfirmationPort sendEmail,
     ClientRepositoryPort repository

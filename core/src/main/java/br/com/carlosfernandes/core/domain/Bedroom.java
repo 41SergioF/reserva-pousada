@@ -4,13 +4,15 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
+import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import org.bson.types.ObjectId;
 
 @Getter
 @Setter
-@NoArgsConstructor
+@EqualsAndHashCode(of = "id")
 public class Bedroom {
 	
 	private String id;
@@ -18,33 +20,7 @@ public class Bedroom {
 	private String description;
 	
 	private Status status;
-	
-	private List<Reserve> reserves = new ArrayList<>();
 
-	public Bedroom(String id, String number, String description, Status status, List<Reserve> reserves) {
-		this.id = id;
-		this.number = number;
-		this.description = description;
-		this.status = status;
-		this.reserves = reserves;
-	}
-
-	@Override
-	public int hashCode() {
-		return Objects.hash(id);
-	}
-
-	@Override
-	public boolean equals(Object obj) {
-		if (this == obj)
-			return true;
-		if (obj == null)
-			return false;
-		if (getClass() != obj.getClass())
-			return false;
-		Bedroom other = (Bedroom) obj;
-		return Objects.equals(id, other.id);
-	}
-	
+	private List<ObjectId> reserves = new ArrayList<>();
 
 }

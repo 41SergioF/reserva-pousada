@@ -6,7 +6,9 @@ import br.com.carlosfernandes.repository.mongodb.connections.MongoTemplateSingle
 import com.mongodb.client.MongoClients;
 import org.springframework.data.mongodb.core.MongoOperations;
 import org.springframework.data.mongodb.core.MongoTemplate;
+import org.springframework.stereotype.Service;
 
+@Service
 public class ClientRepository implements ClientRepositoryPort {
 
     private final MongoOperations operation;

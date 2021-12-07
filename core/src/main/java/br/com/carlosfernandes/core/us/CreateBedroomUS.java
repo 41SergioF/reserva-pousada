@@ -3,7 +3,9 @@ package br.com.carlosfernandes.core.us;
 import br.com.carlosfernandes.core.domain.Bedroom;
 import br.com.carlosfernandes.core.ports.driven.repository.BedroomRepositoryPort;
 import br.com.carlosfernandes.core.ports.driver.CreateBedroomPort;
+import org.springframework.stereotype.Service;
 
+@Service
 public record CreateBedroomUS(
         BedroomRepositoryPort repository
 ) implements CreateBedroomPort {
