@@ -1,5 +1,6 @@
 package br.com.carlosfernandes.api.controller;
 
+import br.com.carlosfernandes.api.controller.request.BedroomRequest;
 import br.com.carlosfernandes.core.domain.Bedroom;
 import br.com.carlosfernandes.core.domain.Reserve;
 import br.com.carlosfernandes.core.ports.driver.CreateBedroomPort;
@@ -20,7 +21,8 @@ public class BedroomController {
     CreateBedroomPort createBedroomPort;
 
     @PostMapping
-    Bedroom post(@RequestBody Bedroom bedroom){
-        return createBedroomPort.apply(bedroom);}
+    Bedroom post(@RequestBody BedroomRequest bedroom){
+        return createBedroomPort.apply(bedroom.toBedroom());
+    }
 
 }

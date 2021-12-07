@@ -1,7 +1,9 @@
 package br.com.carlosfernandes.api.controller.request;
 
 import br.com.carlosfernandes.core.domain.Client;
+import lombok.Setter;
 
+@Setter
 public class ClientRequest {
 
     private String name;
