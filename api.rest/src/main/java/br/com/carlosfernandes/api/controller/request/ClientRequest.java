@@ -19,5 +19,4 @@ public class ClientRequest {
         return client;
     }
 
-
 }

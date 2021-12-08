@@ -20,6 +20,8 @@ public class BedroomRequest {
         var bedroom = new Bedroom();
         bedroom.setNumber(number);
         bedroom.setDescription(description);
+
+        return bedroom;
     }
 
 }

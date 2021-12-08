@@ -1,6 +1,7 @@
 package br.com.carlosfernandes.api.controller;
 
 import br.com.carlosfernandes.api.controller.request.ClientRequest;
+import br.com.carlosfernandes.api.controller.response.ClientResponse;
 import br.com.carlosfernandes.core.domain.Client;
 import br.com.carlosfernandes.core.ports.driver.CreateClientPort;
 import br.com.carlosfernandes.core.us.CreateClientUS;
@@ -20,8 +21,11 @@ public class ClientController {
     private CreateClientPort createClientPort;
 
     @PostMapping
-    public Client post(@RequestBody ClientRequest client){
-        return createClientPort.apply(client.toClient());
+    public ClientResponse post(@RequestBody ClientRequest clientRequest){
+        var client = createClientPort.apply(clientRequest.toClient());
+        var clientResponse = new ClientResponse().fromClient(client);
+
+        return clientResponse;
     }
 
 }
