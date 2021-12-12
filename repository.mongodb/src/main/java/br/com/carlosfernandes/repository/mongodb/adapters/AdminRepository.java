@@ -12,7 +12,7 @@ public class AdminRepository implements AdminRepositoryPort {
     private final MongoOperations operations;
 
     public AdminRepository() {
-        operations = MongoTemplateSingleton.operations
+        operations = MongoTemplateSingleton.operations;
     }
 
     @Override

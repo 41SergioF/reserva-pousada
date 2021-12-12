@@ -1,15 +1,15 @@
 package br.com.carlosfernandes.core.us;
 
-import br.com.carlosfernandes.core.domain.Bedroom;
-import br.com.carlosfernandes.core.domain.Client;
+import br.com.carlosfernandes.core.domain.Admin;
+import br.com.carlosfernandes.core.ports.driven.email.SendEmailForTokenConfirmationPort;
 import br.com.carlosfernandes.core.ports.driven.repository.AdminRepositoryPort;
-import br.com.carlosfernandes.core.ports.driven.repository.BedroomRepositoryPort;
-import br.com.carlosfernandes.core.ports.driver.CreateBedroomPort;
+import br.com.carlosfernandes.core.ports.driver.CreateAdminPort;
 import org.springframework.stereotype.Service;
 
 @Service
 public record CreateAdminUS(
-        AdminRepositoryPort repository
+        AdminRepositoryPort repository,
+        SendEmailForTokenConfirmationPort sendEmail
 ) implements CreateAdminPort {
 
     @Override
