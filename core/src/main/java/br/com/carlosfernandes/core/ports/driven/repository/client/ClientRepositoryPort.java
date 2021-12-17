@@ -1,4 +1,4 @@
-package br.com.carlosfernandes.core.ports.driven.repository;
+package br.com.carlosfernandes.core.ports.driven.repository.client;
 
 import br.com.carlosfernandes.core.domain.Client;
 

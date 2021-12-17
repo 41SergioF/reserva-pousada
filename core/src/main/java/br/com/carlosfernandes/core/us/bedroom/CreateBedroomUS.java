@@ -1,8 +1,8 @@
-package br.com.carlosfernandes.core.us;
+package br.com.carlosfernandes.core.us.bedroom;
 
 import br.com.carlosfernandes.core.domain.Bedroom;
-import br.com.carlosfernandes.core.ports.driven.repository.BedroomRepositoryPort;
-import br.com.carlosfernandes.core.ports.driver.CreateBedroomPort;
+import br.com.carlosfernandes.core.ports.driven.repository.bedroom.BedroomRepositoryPort;
+import br.com.carlosfernandes.core.ports.driver.bedroom.CreateBedroomPort;
 import org.springframework.stereotype.Service;
 
 @Service

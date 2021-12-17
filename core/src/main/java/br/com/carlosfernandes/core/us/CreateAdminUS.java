@@ -2,7 +2,7 @@ package br.com.carlosfernandes.core.us;
 
 import br.com.carlosfernandes.core.domain.Admin;
 import br.com.carlosfernandes.core.ports.driven.email.SendEmailForTokenConfirmationPort;
-import br.com.carlosfernandes.core.ports.driven.repository.AdminRepositoryPort;
+import br.com.carlosfernandes.core.ports.driven.repository.admin.AdminRepositoryPort;
 import br.com.carlosfernandes.core.ports.driver.CreateAdminPort;
 import org.springframework.stereotype.Service;
 

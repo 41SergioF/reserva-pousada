@@ -1,4 +1,4 @@
-package br.com.carlosfernandes.core.ports.driver;
+package br.com.carlosfernandes.core.ports.driver.bedroom;
 
 import br.com.carlosfernandes.core.domain.Bedroom;
 
